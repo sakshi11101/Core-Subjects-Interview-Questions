@@ -1,0 +1,66 @@
+Q1. What is OOPS?
+Ans. Object Oriented Programming is a programming paradigm where the complete software operates as a bunch of objects talking to each other. 
+An object is a collection of data and the methods which operate on that data. In this paradigm, we visualize every entity as an object 
+and try to structure the program based on the state and behavior of that object.
+Examples of languages using OOPs: C++, Java, Javascript, Python, C#, Ruby.
+
+Q2. Why OOPS?
+Ans. a. OOPs helps users to understand the software easily, although they don’t know the actual implementation.
+     b. The code becomes easy to understand, read and maintain through it's various concepts, such as encapsulation.
+     c. Even very big software can be easily written and managed easily using OOPs.
+
+Q3. What other programming paradigms exists besides OOPs?
+Ans. The programming paradigms are referred as the technique or approach of writing a program. There are various programming paradigms such as:
+     a. Imperative Paradigm               b. Declarative Paradigm
+
+Q4. Explain Imperative Paradigm?
+Ans. This paradigm works by changing the program state through assignment statements. The main focus is to achieve the goal. Three types are:
+  a. Procedural Paradigm : It is based on procedure call concept. Procedures(routines or functions) are the basic building blocks of the program in this paradigm.
+  b. Object-Oriented Paradigm : Here, we visualize every entity as an object and try to structure the program based on the state and behaviour of that object.
+  c. Parallel Paradigm : Here we process the instructions by dividing them into multiple smaller parts and executing them concurrently.
+
+Q5. Explain Declarative Paradigm?
+Ans. 
+
+Q6. What is Structured Programming?
+Ans. It is a technique that is considered a precursor of OOPs and consists of well-structured and separate modules.
+The instructions in this approach are executed in a serial and structured manner. examples of languages using them: C, C++, C#, Java.
+Nearly all programming paradigms include Structured programming, including the OOPs model.
+
+
+Q7. What is the difference between Structured Programming and Object-Oriented Programming?
+Ans.   ******* Object-Oriented Programming : ***********
+  a. In this programming paradigm, we visualise every entity as objects and try to structure the program based on the state and behaviour of objects.
+  b. It follows bottom to top approach.
+  c. Enhanced code reusability with the concepts of polymorphism and inheritance.
+  d. Modifying and updating the code is easier.
+  e. Methods work dynamically, calls are made based on object behaviour or when code required at runtime.
+  f. Data is given more importance.
+
+      ******* Structured Programming : ***********
+  a. The program's logical structure is provided by structural programming, which divides the program into it's corresponding functions.
+  b. It follows top to down appraoch.
+  c. Code resuability is achieved by using functions and loops.
+  d. Modifying code is difficult compared to OOPs.
+  e. Functions are called sequentially, code lines are processed step by step.
+  f. Code is given more importance here.
+
+Q8. Advantages of OOPs?
+Ans. 
+  a. Enhanced code reusability.
+  b. Code is easier to maintain and update.
+  c. It provides better data security by restricting the data access and unnecessary exposure.
+  d. Fast to implement and redesign resulting in minimizing the overall complexity of the program.
+  e. It also helps to hide the unnecessary details with the help of Data Abstraction.
+
+Q9. Disadvantages of OOPs?
+Ans. 
+  a. OOP introduces complex concepts like classes, objects, inheritance, and polymorphism, making it harder for new programmers to grasp and apply them effectively.
+  b. OOP's emphasis on modularity and code organization can make larger projects more challenging to understand and maintain.
+  c. Inheritance and code reuse in OOP can create interdependencies among classes, making it difficult to manage changes and maintain overall functionality.
+  d. The length of the programs is much larger in comparison to the procedural approach.
+
+Q10. What is class?
+Ans. A class is a building block of Object-Oriented Programs. It is a user-defined data type that contains the data members and member functions that operate on the data members. 
+It is like a blueprint or template of objects having common properties and methods.
+    
