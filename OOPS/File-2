@@ -1,0 +1,52 @@
+Q1. What is Encapsulation?
+Ans. It is the binding of the data and methods into a single unit. It is a mechanism that binds together code and data it manipulates such
+that the senstivie information is hidden from the users. It is achieved as :
+
+  a. Data hiding: The language feature to restrict the access to members and methods of the object. ex: access specifiers or 
+access modifiers like public, private and protected.
+  b. Bundling of data and methods together: It involves the bundling of data and methods tha operate on that data. for ex: class which is 
+      a single unit to wrap the data members and methods.
+
+Q2. What is Abstraction?
+Ans. It means showing the necesssary information(or essential featuers of an object) to the users and hiding irrelevant information 
+such as complext implementation details, simplying system interaction and development.
+
+Q3. What is Inheritance?
+Ans. Inheritance is the mechanism when the class is derived from other class to acquire the properties 
+and behaviors (attributes and methods). The derived class is called the subclass/child/derived class and the class from which it derives
+is called the parent/superclass.
+
+Inheritance is used to improve code reusability. It is also used to achieve runtime polymorphism.
+
+Q4. What is Polymorphism?
+Ans. It allows the entity, any interface (or method) to have multiple forms. For example, in C++, we can define multiple functions
+having the same name but different implementations depending on the context.
+Polymorphism is achieved through inheritance, interface and overriding.
+
+Q5. Polymorphism is classified into how many types? Define them.
+Ans. It is classified into two types:
+  a. Compile-Time Polymorphism: Static or early binding :
+    - Method overloading can be done in same class and different class by inheritance
+    - Method name should be different while the parameters should be different
+    - We can take any access specifier or return type - it does not affect method overloading.
+Ex: Method overloading, operator overloading
+
+  b. RunTime Polymorphism: Dynamic or late binding, it is the polymorphism 
+    - Here method overriding can be done and Only possible in different class by inheritance.
+    - Method name and parameters should be same, only implementation by subclass can be different.
+    - We should have same return type and access modifier should be superior.
+Ex: Function overriding
+
+Q6. What are access specifiers?
+Ans. Access specifiers or access modifiers are special keywords that are used to specify or control the accessibility of the entities
+like classes, methods etc.
+Private, public and protected are the examples of access modifiers. Encapsulation and data hiding are largely achieved because of these
+access modifiers.
+
+Q7. What is the difference between method overloading and method overriding?
+Ans. Method overloading is achieved when two or more methods have the same name but different parameters. 
+    It can be done within the same class or different class(specifically superclass by inheritance.)
+
+Method Overriding - it is achieved when subclass has the same method with same parameters but with a different implementation
+    from already provided by parent class. It is across classes with same parameters.
+
