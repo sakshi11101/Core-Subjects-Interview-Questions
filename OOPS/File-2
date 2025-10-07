@@ -50,3 +50,68 @@ Ans. Method overloading is achieved when two or more methods have the same name 
 Method Overriding - it is achieved when subclass has the same method with same parameters but with a different implementation
     from already provided by parent class. It is across classes with same parameters.
 
+Q8. Different types of inheritance?
+Ans.
+  a. Single Level inheritance: Child class is derived from a single base class.
+  b. Multiple inheritance: Child class is deriving from multiple base classes. (Java does not support this.)
+  c. Multilevel inheritnace : Child class is derived from a class which is derived from other base class.
+  d. Hierarchical inheritance: Multiple child classes deriving from a single base class.
+  d. Hybrid inheritance: Inheritance consisting of multiple inheritance types of the above specified.
+
+Refer diagram: https://media.geeksforgeeks.org/wp-content/uploads/20240730171935/Types-of-inheritance.webp
+
+Q9. What is an interface?
+Ans. An interface is a blueprint of class that only contains method declarations and not their definitions. It helps us to achieve
+abstraction and to also support the functionality of multiple inheritance. We cannot make objects using interface.
+
+- It cannot have concrete methods(methods having complete implementation)
+- The interface has only static and final variables.
+- It supports multiple inheritance.
+
+Q10. What is an abstract class in Java?
+Ans. An abstract class in Java is a class that is declared with abstract keyword and and cannot be instantiated directly. It serves as a blueprint 
+for other classes, providing common functionality and attributes that subclasses can extend and override.
+
+- It can have both abstract and concrete methods (methods having implementation).
+- It can have variables that can be static, non-static as well as final and non-final.
+- It doesn't support multiple inheritance.
+
+Q11. How much memory does a class occupy?
+Ans. Classes do not occupy memory. They merely serve as template for items to be made. Objects are the ones that initialise the members and 
+methods of classes when they are constructed, using memory in the process.
+
+Q12. Is it always necessary to create objects from class?
+Ans. No, it is not always necessary to create objects from class. If the class has non-static methods, then object creation is required
+to access the memthods and if there are static methods in the class, then we can use the class name directly to call those static methods.
+
+Q13. What is the differnce between struct and class in C++ ?
+Ans. Struct and class are user-defined datatype very similar but with following differences:
+  a. In structure, the members are set to public by default while in class, members are set to private by default.
+  b. structs are often favored for simple data aggregation, often referred to as Plain Old Data (POD) structures, where the emphasis is on 
+     data storage and direct access, with minimal or no member functions whereas classes are typically used to implement more 
+     complex object-oriented designs, encapsulating both data and behavior 
+     and utilizing features like inheritance, polymorphism, and abstraction.
+
+Q14. What is a constructor?
+Ans. A constructor is a block of code that initialises the object. It resembles the instance method but is not a method as it does not have
+return type. Generally, constructor have the same name as class, but in some languages it might differ.
+
+Q15. What are different types of constructor?
+Ans. The classification of different types of constructor are :
+
+  a. Default constructor: Default constructor is the constructor that doesn't take any arguments. It is a non-parameterized constructor
+that is automatically defined by compiler when no explicit definition is provided. It initialises the data members to their default values.
+  b. Non-Parameterised constructor: It is user-defined constructor having no arguments or parameters.
+  c. Parameterised constructor: The constructor that can take some arguments. 
+  d. Copy constructor: It is a member function that initialises an object using another object of the same class.
+
+Q16. What is a destructor?
+Ans. A destructor is a method that is automatically called when an object goes out of scope and or destroyed. In C++, the destructor
+name is also the same as the class name but with the (~)tilde symbol as prefix.
+
+class base {
+public:
+    ~base() { cout << "This is a destructor"; }
+}
+
+In Java, the garbage collector automatically deletes the useless objects so there is no concept of destructor in Java.
