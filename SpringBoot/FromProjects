@@ -1,6 +1,6 @@
 Q1. What is annotation @Controller?
 Ans. It tells the Spring framework that the annotated class is designed to handle web requests and interact with the model and view components 
-and mapping them to specific handler methods to return either a view.
+and mapping them to specific handler methods to return a view.
 
 Q2. What is @RequestMapping annotation used for?
 Ans. The @RequestMapping annotation is used to map web requests to specific handler classes and/or handler methods within a Spring application. 
@@ -9,7 +9,25 @@ Ans. The @RequestMapping annotation is used to map web requests to specific hand
 Class Level: When applied to a controller class, it defines a base URI for all endpoints within that controller. 
 All method-level mappings within that class will then be relative to this base URI.
 
-Method Level: When applied to individual methods, it defines the specific URI for that particular endpoint, which can either be absolute or relative to a class-level @RequestMapping.
+Method Level: When applied to individual methods, it defines the specific URI for that particular endpoint, 
+which can either be absolute or relative to a class-level @RequestMapping.
 
-Q3. 
+Q3. What is Lombok?
+Ans. Lombok is a Java library used to reduce boilerplate code by automatically generating common methods like getters, setters, toString(), 
+and equals() at compile time through annotations.
+
+Q4. What is @Data annotation for?
+Ans. This annotation is provided by java library, and automatically generates common methods like toString(), getters and setters, reducing
+some boilerplate code.
+
+Q5. What is @NoArgsConstructor for?
+Ans. It automatically generates no-args constructor for a class.
+
+Q6. What is @AllArgsConstructor for?
+Ans. @AllArgsConstructor annotation generates a constructor initializing all object fields.
+
+Q7. What is @RequiredArgsConstructor for?
+Ans. @RequiredArgsConstructor generates a constructor that initializes only fields marked as final or @NonNull.
+
+
 
