@@ -29,5 +29,26 @@ Ans. @AllArgsConstructor annotation generates a constructor initializing all obj
 Q7. What is @RequiredArgsConstructor for?
 Ans. @RequiredArgsConstructor generates a constructor that initializes only fields marked as final or @NonNull.
 
+Q8. What is @Service annotation for?
+Ans. @Service annotation in spring boot is a specialisation of @Component annotation, that designates a class belongs to service layer.
+This layer is responsible for encapsulating all the business logic and performing operation which might include accessing the data
+from data access layer etc.
 
+Q9. What is @Component annotation for?
+Ans @Component annotation in spring boot is a class level annotation that marks the java class as spring managed component. 
+This indicates to the Spring container that it should be automatically detected during classpath scanning and registered as a Spring bean.
 
+Q10. What is @Repository annotation for?
+Ans. @Repository annotation is a specialisation of @Component annotation in spring boot, that indicates that class is a repository. 
+This layer is responsible for data persistence and data retrieval, effectively acting as (DAO) data-access-object layer that interacts with
+database or other data storage mechanisms.
+
+Q11. What is @Autowired annotation for?
+Ans. @Autowired annotation in spring boot is the core mechanism to achieve dependency injection. 
+It instructs spring IoC(Inversion of control) container to automatically resolve and inject beans(dependencies) into your application's 
+objects. This eliminates the need for manual configuration and object creation, leading to more modular and testable code.
+
+------- How Autowired Works? -------
+When spring container initializes your application, it identifies the classes marked with @Component, @Controller, @Service, @Repository
+as spring beans. When a bean requires another bean as a dependency, we can use @Autowired to tell spring to provide that dependency
+automatically.
