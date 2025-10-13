@@ -93,6 +93,10 @@ like classes, methods etc.
 Private, public and protected are the examples of access modifiers. Encapsulation and data hiding are largely achieved because of these
 access modifiers.
 
+Private: Accessible only within the class where it is declared.
+Public: Accessible from anywhere (within the same package, different packages, subclasses, non-subclasses).
+Protected: Accessible within the same package and by subclasses (even if in a different package).
+
 Q9. What is an interface?
 Ans. An interface is a blueprint of class that only contains method declarations and not their definitions. It helps us to achieve
 abstraction and to also support the functionality of multiple inheritance. We cannot make objects using interface.
