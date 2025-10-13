@@ -1,0 +1,12 @@
+Q1. What is Diamond Problem in OOP and how it is resolved?
+Ans. The diamond problem in software technology refers to the ambiguity that arises when a class inherits from multiple classes
+that have a common ancestor, leading to multiple copies of the ancestor's members and unclear calls to its methods or properties. 
+
+For example, in a hierarchy where D inherits from B and C, and both B and C inherit from A, a call to a method from A from a D 
+object becomes ambiguous because the compiler doesn't know which A instance (via B or C) to use. 
+
+Solutions to Diamond Problem:
+* Java: Java doesn't allow for multiple inheritance of classes, which directly prevents the problem for class inheritance. 
+* C++ : Supports multiple inheritance and uses virtual inheritance to ensure that 
+the common base class (A in the example) is only instantiated once.
+
