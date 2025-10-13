@@ -7,23 +7,64 @@ access modifiers like public, private and protected.
   b. Bundling of data and methods together: It involves the bundling of data and methods tha operate on that data. for ex: class which is 
       a single unit to wrap the data members and methods.
 
+-- How encapsulation provide security --
+Ans. 1. Prevents unauthorised modification: By restricting direct access, sensitive data within an object 
+cannot be arbitrarily view or modified via external code.
+  2. Maintains Data Integrity: Validation logic within setter methods ensures that data always adheres to specific rules or constraints.
+  3. Reduces Vulnerability Surface: By exposing only necessary methods and hiding internal implementation details.
+
 Q2. What is Abstraction?
 Ans. It means showing the necesssary information(or essential featuers of an object) to the users and hiding irrelevant information 
 such as complext implementation details, simplying system interaction and development.
 
+---- How abstraction is implemented in Java -----
+In Java, abstraction is primarily achieved through two mechanisms: abstract classes and interfaces.
+
+1. Abstract Classes:
+Partial Abstraction: Abstract classes can provide both abstract methods (methods declared without an implementation) 
+and concrete methods (methods with an implementation). This means they offer partial abstraction, as some functionality 
+can be defined while other parts are left for subclasses to implement.
+
+abstract keyword: An abstract class is declared using the abstract keyword.
+
+Cannot be instantiated: You cannot create an object directly from an abstract class. It serves as a base class for other classes to extend. 
+
+Subclass Responsibility: Any non-abstract subclass of an abstract class must provide implementations for all inherited abstract methods.
+
+2. Interfaces:
+Complete Abstraction: Interfaces provide a blueprint of a class, containing only abstract methods and static final variables. 
+This achieves complete abstraction, as no implementation details are provided within the interface itself.
+
+interface keyword: An interface is declared using the interface keyword.
+
+implements keyword: Classes implement interfaces using the implements keyword.
+
+Multiple Inheritance of Type: A class can implement multiple interfaces, allowing for a form of multiple inheritance of type.
+
+Contract Enforcement: Interfaces enforce a contract that any implementing class must adhere to by providing implementations 
+for all the interface's abstract methods.
+
 Q3. What is Inheritance?
 Ans. Inheritance is the mechanism when the class is derived from other class to acquire the properties 
 and behaviors (attributes and methods). The derived class is called the subclass/child/derived class and the class from which it derives
-is called the parent/superclass.
+is called the parent/superclass. It is an "is-a" relationship.
 
 Inheritance is used to improve code reusability. It is also used to achieve runtime polymorphism.
 
-Q4. What is Polymorphism?
+Q4. Different types of inheritance?
+Ans.
+  a. Single Level inheritance: Child class is derived from a single base class.
+  b. Multiple inheritance: Child class is deriving from multiple base classes. (Java does not support this.)
+  c. Multilevel inheritnace : Child class is derived from a class which is derived from other base class.
+  d. Hierarchical inheritance: Multiple child classes deriving from a single base class.
+  d. Hybrid inheritance: Inheritance consisting of multiple inheritance types of the above specified.
+
+Q5. What is Polymorphism?
 Ans. It allows the entity, any interface (or method) to have multiple forms. For example, in C++, we can define multiple functions
 having the same name but different implementations depending on the context.
 Polymorphism is achieved through inheritance, interface and overriding.
 
-Q5. Polymorphism is classified into how many types? Define them.
+Q6. Polymorphism is classified into how many types? Define them.
 Ans. It is classified into two types:
   a. Compile-Time Polymorphism: Static or early binding :
     - Method overloading can be done in same class and different class by inheritance
@@ -37,12 +78,6 @@ Ex: Method overloading, operator overloading
     - We should have same return type and access modifier should be superior.
 Ex: Function overriding
 
-Q6. What are access specifiers?
-Ans. Access specifiers or access modifiers are special keywords that are used to specify or control the accessibility of the entities
-like classes, methods etc.
-Private, public and protected are the examples of access modifiers. Encapsulation and data hiding are largely achieved because of these
-access modifiers.
-
 Q7. What is the difference between method overloading and method overriding?
 Ans. Method overloading is achieved when two or more methods have the same name but different parameters. 
     It can be done within the same class or different class(specifically superclass by inheritance.)
@@ -50,15 +85,13 @@ Ans. Method overloading is achieved when two or more methods have the same name 
 Method Overriding - it is achieved when subclass has the same method with same parameters but with a different implementation
     from already provided by parent class. It is across classes with same parameters.
 
-Q8. Different types of inheritance?
-Ans.
-  a. Single Level inheritance: Child class is derived from a single base class.
-  b. Multiple inheritance: Child class is deriving from multiple base classes. (Java does not support this.)
-  c. Multilevel inheritnace : Child class is derived from a class which is derived from other base class.
-  d. Hierarchical inheritance: Multiple child classes deriving from a single base class.
-  d. Hybrid inheritance: Inheritance consisting of multiple inheritance types of the above specified.
-
 Refer diagram: https://media.geeksforgeeks.org/wp-content/uploads/20240730171935/Types-of-inheritance.webp
+
+Q8. What are access specifiers?
+Ans. Access specifiers or access modifiers are special keywords that are used to specify or control the accessibility of the entities
+like classes, methods etc.
+Private, public and protected are the examples of access modifiers. Encapsulation and data hiding are largely achieved because of these
+access modifiers.
 
 Q9. What is an interface?
 Ans. An interface is a blueprint of class that only contains method declarations and not their definitions. It helps us to achieve
@@ -115,3 +148,32 @@ public:
 }
 
 In Java, the garbage collector automatically deletes the useless objects so there is no concept of destructor in Java.
+
+Q17. What is static keyword?
+Ans. The static keyword in Java indicates that a member (variable, method, block, or nested class) belongs to the class itself rather than 
+to any specific instance of the class. This means the member is shared across all instances.
+
+Q18. Difference between inheritance and composition.
+Ans. Inheritance definition from above can be told. 
+
+1. Composition in Java is a design principle where a class contains instances of other classes as its members. 
+It represents a "has-a" relationship, meaning one object "has" another object as a part of itself. 
+This is in contrast to inheritance, which represents an "is-a" relationship.
+
+2. In inheritance we need parent class to test subclass while composition allows testing the implementation of the classes we are 
+using independent of parent or child class.
+
+3. Inheritance cannot extend final class whereas composition allows code reuse even from final classes.
+
+Q19. What is final class in java?
+Ans. In Java, a final class is a class that cannot be extended or subclassed by any other class. There is no inheritance, methods are
+implicitly final, no abstract methods allowed, but can implement interfaces. 
+final classes are often used to create immutable objects, where the state of the object cannot be changed after creation. 
+The String class in Java is a prime example of a final and immutable class.
+
+Q20. Difference between final, finally and finalize?
+Ans. * Final: The final keyword in Java is used with variables, methods and also with classes to restrict modification or extension.
+* Finally: The finally keyword in Java is used to create a block of code that always executes after the try block, 
+regardless of whether an exception occurs or not.
+* Finalize: It is a special method of an object class. It is called by the garbage collector just before an object is destroyed and removed
+from memory for clean activities.
