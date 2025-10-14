@@ -6,7 +6,78 @@ For example, in a hierarchy where D inherits from B and C, and both B and C inhe
 object becomes ambiguous because the compiler doesn't know which A instance (via B or C) to use. 
 
 Solutions to Diamond Problem:
-* Java: Java doesn't allow for multiple inheritance of classes, which directly prevents the problem for class inheritance. 
+* Java: Java doesn't allow for multiple inheritance of classes, which directly prevents the problem for class inheritance. But here if
+two interfaces have a method declared with same signature and a class implements both the interfaces, then ambiguity arises and in that case,
+child class class must explicitly override the implementation.
+
 * C++ : Supports multiple inheritance and uses virtual inheritance to ensure that 
 the common base class (A in the example) is only instantiated once.
+
+Q2. What is association, aggregation and composition in java?
+Ans. Association in Java is a connection of relationship between two independent classes that are setup through their objects.
+Association relationship indicates how objects know each other and how they use each other's functionality. The relationship can be 
+one-to-one, one-to-many, many-to-one and many-to-many.
+
+Read article: https://medium.com/edureka/association-in-java-3d0facf63d56
+
+Q3. What is the difference between super and this keyword?
+Ans. * 'this' is a reserved keyword and provides a way to refer current object within a class's methods or a constructor.
+     * this() call invokes another constructor within the same class, which must be the first line of the constructor.
+
+It can be used in various contexts as given below:
+
+to refer instance variable of current class
+to invoke or initiate current class constructor
+can be passed as an argument in the method call
+can be passed as argument in the constructor call
+can be used to return the current class instance
+
+* 'super' is a reserved keyword and allows access to the members(methods, constructor) of the immediate parent class.
+* super() invokes the constructor of the parent class.
+
+super can be used in various contexts as given below:
+
+it can be used to refer immediate parent class instance variable
+it can be used to refer immediate parent class method
+it can be used to refer immediate parent class constructor.
+
+They both are non-static keywords and can be used anywhere except static area.
+
+Q4. Difference between instance variable and local variable?
+Ans. The distinction between instance variables and local variables lies primarily in their scope, lifetime, and declaration location.
+
+Instance Variables:
+
+* Declaration: Declared within a class, but outside of any method, constructor, or block.
+* Scope: Accessible by all methods within the class. They belong to a specific object (instance) of the class.
+* Lifetime: Exist as long as the object they belong to exists in memory. Each object has its own copy of the instance variables.
+* Initialization: If not explicitly initialized, they are automatically assigned default values (e.g., 0 for numeric types, 
+null for object references, false for booleans). 
+
+Local Variables:
+* Declaration: Declared inside a method, constructor, or a specific block of code. 
+* Scope: Limited to the method, constructor, or block in which they are declared. They are not accessible outside this defined scope. 
+* Lifetime: Created when their containing method or block is entered and destroyed when the method or block exits.
+* Initialization: Must be explicitly initialized before use. 
+In Java, the compiler will generate an error if a local variable is used without being initialized, but in C++, it doesn't give compile
+error, but give a giberish value.
+
+Q5. Can we override a private or static method?
+Ans. No, it is not possible to override private or static methods in Java.
+
+Private Methods: They are inaccessible outside the class in which they are declared, hence even subclasses won't be able to override them.
+If a subclass declares a method with the same name and signature as a private method in its superclass, 
+it is considered a new, independent method within the subclass, not an overridden method.
+
+Static Methods: Method overriding is a concept of dynamic polymorphism, which relies on dynamic binding at runtime. As static methods are 
+associated with class and not with instance(object) of class, They are bound at compile time (static binding).
+If a subclass declares a static method with the same name and signature as a static method in its superclass, 
+this is known as method hiding, not overriding. In this case, the method invoked depends on the declared type of the reference variable, 
+not the actual object type.
+
+Q6. What is deep copy and shallow copy.
+
+Q7. Can abstract classes have constructor?
+Ans. Abstract classes can have constructors, which can be default or user-defined. The subclass can use super keyword to call the 
+constructor of parent abstract class to initialize the inherited parts of the object.
 
