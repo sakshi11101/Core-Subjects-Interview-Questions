@@ -81,3 +81,128 @@ Q7. Can abstract classes have constructor?
 Ans. Abstract classes can have constructors, which can be default or user-defined. The subclass can use super keyword to call the 
 constructor of parent abstract class to initialize the inherited parts of the object.
 
+No, an abstract class cannot be instantiated directly. They serve as blueprint for other classes.
+
+Q7. Can we overload the constructor in a class?
+Ans. Yes we can overload constructor in a class, maybe if we want constructor with different parameter. 
+Example: 
+
+public class Box {
+    double width;
+    double height;
+    double depth;
+
+    // Constructor with all dimensions
+    public Box(double w, double h, double d) {
+        width = w;
+        height = h;
+        depth = d;
+    }
+
+    // Constructor for a cube (all dimensions equal)
+    public Box(double side) {
+        width = height = depth = side;
+    }
+
+    // Default constructor (no arguments)
+    public Box() {
+        width = -1; // Indicate uninitialized
+        height = -1;
+        depth = -1;
+    }
+}
+
+Q8. Can we overload the destructor in a class?
+Ans. No
+
+Q9. What are friend functions and friend classes?
+Ans. * Friend Functions: A friend function is a special function that is allowed to access private and protected data of a class, 
+even though it's not a member of the class.
+Example:
+
+#include <iostream>
+
+class MyClass {
+private:
+    int privateData;
+
+public:
+    MyClass(int data) : privateData(data) {}
+
+    // Declare a friend function
+    friend void displayPrivateData(const MyClass& obj);
+};
+
+// Define the friend function outside the class
+void displayPrivateData(const MyClass& obj) {
+    std::cout << "Private data: " << obj.privateData << std::endl;
+}
+
+int main() {
+    MyClass obj(10);
+    displayPrivateData(obj); // Call the friend function
+    return 0;
+}
+
+While friend function is is declared within the class using the friend keyword, it is not considered a member of that class 
+and is not invoked using the member-selection operators (. or ->)
+
+* Friend Class: A friend class is a class that can access the private and protected members of another class.
+Example:
+
+class MyClass {
+private:
+    int privateData;
+
+public:
+    MyClass(int data) : privateData(data) {}
+
+    // Declare FriendClass as a friend
+    friend class FriendClass; 
+};
+
+class FriendClass {
+public:
+    void accessMyClassData(MyClass& obj) {
+        // FriendClass can access privateData of MyClass
+        obj.privateData = 100; 
+        std::cout << "Accessed privateData: " << obj.privateData << std::endl;
+    }
+};
+
+int main() {
+    MyClass obj(50);
+    FriendClass friendObj;
+    friendObj.accessMyClassData(obj); 
+    return 0;
+}
+
+Q10. What are virtual function and pure virtual function?
+Ans. * Virtual Function: A virtual function is a member function that is declared within a base class using the keyword virtual 
+and is re-defined (Overridden) in the derived class. Virtual functions enable runtime polymorphism (late binding), calling the correct function 
+via a base class pointer or reference.
+
+Have a look at example from here: https://www.geeksforgeeks.org/cpp/virtual-function-cpp/
+
+* Pure Virtual Function: A pure virtual function is a function in a base class with = 0 and no body, which must be overridden in derived 
+classes. A class with such a function is called abstract and cannot be instantiated.
+
+Have a look at example here: https://www.geeksforgeeks.org/cpp/virtual-function-cpp/
+
+class Base
+{
+  public:
+  
+    // Pure virtual function
+    virtual void display() = 0;
+
+    // Pure virtual destructor
+    virtual ~Base() = 0;
+};
+
+----- Note: Was getting confused that diamond problem is solved by virtual function, but it is not virtual function but virtual 
+inheritance to resolve the ambiguity that arises creating only one copy of base class to resolve diamond problem.
+
+Q11. 
+
+Q11. 
