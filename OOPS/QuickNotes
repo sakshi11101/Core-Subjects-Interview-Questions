@@ -1,0 +1,20 @@
+- Constructor chaining - whenever an instance of child class is created, during that time, constructor of first parent in hierarchy is called
+following till that child class. There is super() keyword already associated (by default if not present even) calling the parent class
+constructor.
+
+- this keyword refers to the current instance or current object address. So if there are two instances at present with different value
+therefore.
+
+- Which statement correctly uses the this keyword to call another constructor in the same class?
+this() - is used to call another constructor within the same class. It must be the first statement inside the constructor.
+
+class Example {
+    Example() {
+        this(10); // calling another constructor
+    }
+
+    Example(int x) {
+        System.out.println(x);
+    }
+}
+
