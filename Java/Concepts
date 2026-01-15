@@ -1,0 +1,4 @@
+1. There are 8 primitive datatypes in Java. Byte, Short(2 bytes), int (4 bytes), float(4 bytes), long and decimal(8 bytes), boolean(1 byte), char (2 bytes).
+
+2. Reference or object data types: they are non-primitive data types or a variable that store the reference(memory address) to the actual data on the heap. The actual data (object) is stored in the heap memory, 
+while the variable (reference) is stored in the stack memory. ex: classes like String, Scanner, Arrays, Interfaces etc.
